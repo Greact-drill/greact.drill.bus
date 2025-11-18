@@ -37,6 +37,8 @@ export class IngestController {
     // Получаем URL облачного сервиса из переменных окружения
     const cloudApiUrl = process.env.CLOUD_API_INGEST_URL!;
 
+    console.log(cloudApiUrl);
+
     const response = await fetch(cloudApiUrl, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },

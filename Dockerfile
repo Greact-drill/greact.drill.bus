@@ -13,6 +13,9 @@ RUN npm ci
 # Копируем исходный код
 COPY . .
 
+ARG CLOUD_API_INGEST_URL
+ARG ENABLE_CORS
+
 # Собираем приложение
 RUN npm run build
 
